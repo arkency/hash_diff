@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'hash_diff/version'
+require 'hash_differ/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "hash_diff"
-  spec.version       = HashDiff::VERSION
+  spec.name          = "hash_differ"
+  spec.version       = HashDiffer::VERSION
   spec.authors       = ["Coding Zeal", "Adam Cuppy"]
   spec.email         = ["info@codingzeal.com"]
   spec.description   = %q{Diff tool for deep Ruby hash comparison}
   spec.summary       = %q{Deep Ruby Hash comparison}
-  spec.homepage      = "https://github.com/CodingZeal/hash_diff"
+  spec.homepage      = "https://github.com/arkency/hash_diff"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

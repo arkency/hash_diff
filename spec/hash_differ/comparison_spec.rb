@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe HashDiff::Comparison do
+describe HashDiffer::Comparison do
 
   let(:app_v1_properties) {
     {
@@ -31,7 +31,7 @@ describe HashDiff::Comparison do
   }
 
   subject(:comparison) {
-    HashDiff::Comparison.new(app_v1_properties, app_v2_properties)
+    HashDiffer::Comparison.new(app_v1_properties, app_v2_properties)
   }
 
   describe "#diff" do
@@ -45,11 +45,11 @@ describe HashDiff::Comparison do
           nested: {
             foo: ["bar", "bar2"],
             bar: {
-              one: ["foo1", HashDiff::NO_VALUE],
-              two: [HashDiff::NO_VALUE, "foo2"]
+              one: ["foo1", HashDiffer::NO_VALUE],
+              two: [HashDiffer::NO_VALUE, "foo2"]
             }
           },
-          num:  [1, HashDiff::NO_VALUE],
+          num:  [1, HashDiffer::NO_VALUE],
           word: [nil, "monkey"]
         }
       }
@@ -84,11 +84,11 @@ describe HashDiff::Comparison do
         nested: {
           foo: "bar2",
           bar: {
-            one: HashDiff::NO_VALUE,
+            one: HashDiffer::NO_VALUE,
             two: "foo2"
           }
         },
-        num:  HashDiff::NO_VALUE,
+        num:  HashDiffer::NO_VALUE,
         word: "monkey"
       }
     }
@@ -107,7 +107,7 @@ describe HashDiff::Comparison do
           foo: "bar",
           bar: {
             one: "foo1",
-            two: HashDiff::NO_VALUE
+            two: HashDiffer::NO_VALUE
           }
         },
         num:  1,
