@@ -39,16 +39,4 @@ describe HashDiffer do
 
     it { expect(subject).to eq({ foo: 'bar' }) }
   end
-
-  describe ".patch!" do
-    before { described_class.patch! }
-
-    it "patches #diff to Hash" do
-      expect({}).to respond_to(:diff)
-    end
-
-    it "leaves Object alone" do
-      expect(Object.new).not_to respond_to(:diff)
-    end
-  end
 end
